@@ -54,3 +54,6 @@ docs/_build/
 
 # Intellij files
 .idea/**
+
+# data files
+*.csv
