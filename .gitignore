@@ -54,6 +54,9 @@ docs/_build/
 
 # Intellij files
 .idea/**
+.DS_Store
+DS_Store
+**/.DS_Store
 
 # data files
 *.csv

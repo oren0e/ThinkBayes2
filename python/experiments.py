@@ -19,7 +19,7 @@ ser1 = pd.Series([1,2,3,4],['USA','Germany','USSR','Japan'])
 ser2 = pd.Series([1,2,5,4],['USA','Germany','Italy','Japan'])
 ser3 = pd.Series(data=labels)
 
-# Dataframes
+# Dataframes - Part 2
 np.random.seed(101)
 df = pd.DataFrame(randn(5,4),['A','B','C','D','E'],['W','X','Y','Z'])
 
@@ -47,3 +47,31 @@ df[(df['W']>0) & (df['Y']>1)]
 df.reset_index()
 
 newind = 'CA NY WY OR CO'.split()
+df['States'] = newind
+df
+
+df.set_index('States')
+df
+
+# Dataframes - Part 3
+outside = ['G1','G1','G1','G2','G2','G2']
+inside = [1,2,3,1,2,3]
+hier_index = list(zip(outside,inside))
+hier_index = pd.MultiIndex.from_tuples(hier_index)
+
+df = pd.DataFrame(randn(6,2),index=hier_index,columns=['A','B'])
+df
+df.loc['G1'].loc[1]
+df.index.names
+df.index.names = ['Groups','Num']
+df
+
+df.loc['G2'].loc[2]['B']
+df
+df.loc['G1'].iloc[2]['A']
+
+df
+df.xs('G1')
+df.xs(1,level='Num')
+
+# Missing Data
