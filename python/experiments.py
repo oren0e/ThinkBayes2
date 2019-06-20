@@ -75,3 +75,38 @@ df.xs('G1')
 df.xs(1,level='Num')
 
 # Missing Data
+d = {'A':[1,2,np.nan],'B':[5,np.nan,np.nan],'C':[1,2,3]}
+df = pd.DataFrame(d)
+df
+
+df.dropna()
+df.dropna(axis=1)
+df.dropna(thresh=2)
+
+df
+df.fillna(value='FILL VALUE')
+df['A'].fillna(value=df['A'].mean())
+
+# Group by
+data = {'Company':['GOOG','GOOG','MSFT','MSFT','FB','FB'],
+        'Person':['Sam','Charlie','Amy','Vanessa','Carl','Sarah'],
+        'Sales':[200,120,340,124,243,350]}
+df = pd.DataFrame(data)
+df
+byComp = df.groupby('Company')
+byComp.mean()
+byComp.sum()
+byComp.std()
+
+byComp.sum().loc['FB']
+df.groupby('Company').sum().loc['FB']
+
+df.groupby('Company').count()
+df.groupby('Company').max()
+
+df.groupby('Company').describe()
+df.groupby('Company').describe().transpose()
+df.groupby('Company').describe().transpose()['FB']
+df.groupby('Company').describe().transpose()['FB'][0]
+
+# Merging, joining, and concatenating
