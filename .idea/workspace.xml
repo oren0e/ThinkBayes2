@@ -44,13 +44,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/python/experiments.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="112" selection-start-line="112" selection-end-line="112" />
+            <state relative-caret-position="520">
+              <caret line="179" selection-start-line="179" selection-end-line="179" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/python/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/06-Merging, Joining, and Concatenating.ipynb">
+          <provider selected="true" editor-type-id="jupyter-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -120,7 +125,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1920" />
     <option name="height" value="977" />
@@ -166,8 +171,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -243,18 +248,25 @@
       <workItem from="1558510344317" duration="61000" />
       <workItem from="1560401978608" duration="32000" />
       <workItem from="1560402053141" duration="2060000" />
-      <workItem from="1561012578335" duration="1575000" />
+      <workItem from="1561012578335" duration="1959000" />
+      <workItem from="1561029849521" duration="40000" />
+      <workItem from="1561029911531" duration="616000" />
+      <workItem from="1561030931144" duration="75000" />
+      <workItem from="1561031025204" duration="110000" />
+      <workItem from="1561031365252" duration="524000" />
+      <workItem from="1561471001586" duration="436000" />
+      <workItem from="1561839267506" duration="2394000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30475000" />
+    <option name="totallyTimeSpent" value="35054000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="977" extended-state="6" />
+    <frame x="0" y="23" width="1920" height="977" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992272" visible="true" weight="0.18477103" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992272" visible="true" weight="0.19755058" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -281,10 +293,10 @@
       <window_info anchor="right" id="Json Parser" order="5" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="SciView" order="8" sideWeight="0.48511904" visible="true" weight="0.29339722" />
+      <window_info anchor="right" id="SciView" order="8" sideWeight="0.4747024" visible="true" weight="0.29339722" />
       <window_info anchor="right" id="Database" order="9" />
       <window_info anchor="right" id="Maven Projects" order="10" />
-      <window_info anchor="right" x="0" y="0" width="430" height="777" id="Documentation" order="11" sideWeight="0.51488096" side_tool="true" visible="true" weight="0.29339722" />
+      <window_info anchor="right" x="0" y="0" width="430" height="777" id="Documentation" order="11" sideWeight="0.52529764" side_tool="true" visible="true" weight="0.29339722" />
       <window_info anchor="right" id="Maven" order="12" />
     </layout>
   </component>
@@ -298,6 +310,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/m_and_m.py">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/03-DataFrames.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/Refactored_Py_DS_ML_Bootcamp-master/04-Pandas-Exercises/01-SF Salaries Exercise.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/chap03.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/thinkbayes2/chap2.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -317,13 +338,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/03-DataFrames.ipynb">
-      <provider selected="true" editor-type-id="jupyter-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/Refactored_Py_DS_ML_Bootcamp-master/04-Pandas-Exercises/01-SF Salaries Exercise.ipynb">
-      <provider selected="true" editor-type-id="jupyter-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/chap03.ipynb">
+    <entry file="file://$PROJECT_DIR$/python/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/05-Groupby.ipynb">
       <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/thinkbayes2/learning_classes.py">
@@ -353,13 +368,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/05-Groupby.ipynb">
+    <entry file="file://$PROJECT_DIR$/python/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/06-Merging, Joining, and Concatenating.ipynb">
       <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/python/experiments.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="112" selection-start-line="112" selection-end-line="112" />
+        <state relative-caret-position="520">
+          <caret line="179" selection-start-line="179" selection-end-line="179" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
