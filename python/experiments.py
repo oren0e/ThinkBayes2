@@ -177,8 +177,54 @@ left.join(right,how='outer')
 
 
 # Operations
+df = pd.DataFrame({'col1':[1,2,3,4],'col2':[444,555,666,444],'col3':['abc','def','ghi','xyz']})
+df.head()
+
+df['col2'].unique()
+len(df['col2'].unique())
+df['col2'].nunique()
+df['col2'].value_counts()
+
+df[df['col1']>2]
+df[(df['col1']>2) & (df['col2']==444)]
+
+def times2(x):
+    return x*2
+df['col1'].sum()
+df['col1'].apply(times2)
+df['col3'].apply(len)
+df['col2'].apply(lambda x: x*2)
+
+df.drop('col1',axis=1)
+
+df.columns
+df.index
+
+df.sort_values(by = 'col2')
+
+df.isnull()
+
+data = {'A':['foo','foo','foo','bar','bar','bar'],
+        'B':['one','one','two','two','one','one'],
+        'C':['x','y','x','y','x','y'],
+        'D':[1,3,2,5,4,1]}
+df = pd.DataFrame(data)
+df
+df.pivot_table(values='D', index=['A','B'], columns=['C'])
 
 
+# Data Input and Output
+pd.read_csv('./python/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/example.csv')
+df = pd.read_csv('./python/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/example.csv')
 
+df.to_csv('My_output',index=False)  # same as row.names = F in R
+
+pd.read_excel('./python/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/Excel_Sample.xlsx',
+              sheet_name='Sheet1')
+df.to_excel('Excel_Sample2.xlsx', sheet_name='NewSheet')
+
+data = pd.read_html('https://www.fdic.gov/bank/individual/failed/banklist.html')
+type(data)
+data[0].head()
 
 
