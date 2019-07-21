@@ -227,4 +227,17 @@ data = pd.read_html('https://www.fdic.gov/bank/individual/failed/banklist.html')
 type(data)
 data[0].head()
 
+from impala.dbapi import connect
+from impala.util import as_pandas
+import yaml
+with open('/Users/orenepshtain/bi/dr/settings.yaml') as f:
+    settings = yaml.safe_load(f)
 
+conn = connect(host=settings['DATABASES']['impala_dr']['HOST'],
+               port=21050,
+               use_ssl=True,
+               auth_mechanism='PLAIN',
+               database=settings['DATABASES']['impala_dr']['DATABASE'],
+               user=settings['DATABASES']['impala_dr']['USER'],
+               password=settings['DATABASES']['impala_dr']['PASSWORD'])
+cursor = conn.cursor()
