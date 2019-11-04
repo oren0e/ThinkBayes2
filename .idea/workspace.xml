@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d545cbe2-6547-4e4e-9c31-fa8f66535584" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/Refactored_Py_DS_ML_Bootcamp-master/04-Pandas-Exercises/01-SF Salaries Exercise.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/python/Refactored_Py_DS_ML_Bootcamp-master/04-Pandas-Exercises/01-SF Salaries Exercise.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/SF_salaries_exercise.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/SF_salaries_exercise.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +139,7 @@
       <workItem from="1563270412162" duration="176000" />
       <workItem from="1563463389090" duration="7946000" />
       <workItem from="1563740617100" duration="31000" />
-      <workItem from="1572881402882" duration="4804000" />
+      <workItem from="1572881402882" duration="9325000" />
     </task>
     <servers />
   </component>
