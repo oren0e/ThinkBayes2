@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d545cbe2-6547-4e4e-9c31-fa8f66535584" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ThinkBayes2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ThinkBayes2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/experiments.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/experiments.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/Refactored_Py_DS_ML_Bootcamp-master/04-Pandas-Exercises/01-SF Salaries Exercise.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/python/Refactored_Py_DS_ML_Bootcamp-master/04-Pandas-Exercises/01-SF Salaries Exercise.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,91 +16,6 @@
   </component>
   <component name="FavoritesManager">
     <favorites_list name="ThinkBayes2" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thinkbayes2/chap2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1794">
-              <caret selection-end-column="39" />
-              <folding>
-                <marker date="1554185562658" expanded="true" signature="425:426" ph="..." />
-                <marker date="1554185562658" expanded="true" signature="425:431" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thinkbayes2/chap3.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/python/experiments.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="242" column="22" selection-start-line="242" selection-start-column="22" selection-end-line="242" selection-end-column="22" />
-              <folding>
-                <element signature="e#44#63#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/thinkbayes2/chap5.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="79" selection-start-line="79" selection-end-line="79" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/python/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/07-Operations.ipynb">
-          <provider selected="true" editor-type-id="jupyter-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thinkbayes2/learning_classes.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="216" column="8" selection-start-line="216" selection-start-column="8" selection-end-line="216" selection-end-column="8" />
-              <folding>
-                <marker date="1552672609791" expanded="true" signature="4990:4991" ph="..." />
-                <marker date="1552672609791" expanded="true" signature="4990:4996" ph="..." />
-                <marker date="1552672609791" expanded="true" signature="5370:6297" ph="..." />
-                <marker date="1552672609791" expanded="true" signature="5607:6146" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thinkbayes2/thinkbayes2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="3034" column="26" selection-start-line="3034" selection-start-column="22" selection-end-line="3034" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/dice.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -124,49 +37,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/thinkbayes2/ca.py" />
-        <option value="$PROJECT_DIR$/thinkbayes2/learning_classes.py" />
-        <option value="$PROJECT_DIR$/thinkbayes2/chap2.py" />
-        <option value="$PROJECT_DIR$/thinkbayes2/chap3.py" />
-        <option value="$PROJECT_DIR$/python/experiments.py" />
-        <option value="$PROJECT_DIR$/python/house_prices_kaggle_kernel.py" />
-        <option value="$PROJECT_DIR$/thinkbayes2/chap5.py" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1920" />
     <option name="height" value="977" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="ThinkBayes2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ThinkBayes2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ThinkBayes2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ThinkBayes2" type="462c0819:PsiDirectoryNode" />
-              <item name="thinkbayes2" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
-  </component>
+  <component name="ProjectId" id="1T9nuM7BGgcWwPj553iHblTwJEY" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -180,7 +56,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -261,146 +137,25 @@
       <workItem from="1562077678902" duration="2341000" />
       <workItem from="1562579582633" duration="343000" />
       <workItem from="1563270412162" duration="176000" />
-      <workItem from="1563463389090" duration="7492000" />
+      <workItem from="1563463389090" duration="7946000" />
+      <workItem from="1563740617100" duration="31000" />
+      <workItem from="1572881402882" duration="4804000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60323000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="977" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992272" visible="true" weight="0.157082" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.5007728" side_tool="true" weight="0.1544196" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3299435" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946752" weight="0.24067797" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49946752" weight="0.22824858" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5005325" side_tool="true" weight="0.22824858" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3299435" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" order="12" visible="true" weight="0.2621469" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Json Parser" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info active="true" anchor="right" id="SciView" order="8" sideWeight="0.4257274" visible="true" weight="0.28647497" />
-      <window_info anchor="right" id="Database" order="9" />
-      <window_info anchor="right" id="Maven Projects" order="10" />
-      <window_info anchor="right" x="0" y="0" width="430" height="777" id="Documentation" order="11" sideWeight="0.5742726" side_tool="true" visible="true" weight="0.28647497" />
-      <window_info anchor="right" id="Maven" order="12" />
-      <window_info anchor="right" id="R Packages" order="13" />
-      <window_info anchor="right" id="R Graphics" order="14" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/thinkbayes2/ca.py" />
-    <entry file="file://$PROJECT_DIR$/code/chap02.ipynb">
-      <provider selected="true" editor-type-id="jupyter-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/m_and_m.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/03-DataFrames.ipynb">
-      <provider selected="true" editor-type-id="jupyter-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/Refactored_Py_DS_ML_Bootcamp-master/04-Pandas-Exercises/01-SF Salaries Exercise.ipynb">
-      <provider selected="true" editor-type-id="jupyter-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/chap03.ipynb">
-      <provider selected="true" editor-type-id="jupyter-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/06-Merging, Joining, and Concatenating.ipynb">
-      <provider selected="true" editor-type-id="jupyter-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/05-Groupby.ipynb">
-      <provider selected="true" editor-type-id="jupyter-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/house_prices_kaggle_kernel.py" />
-    <entry file="file://$PROJECT_DIR$/python/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/07-Operations.ipynb">
-      <provider selected="true" editor-type-id="jupyter-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/dice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinkbayes2/chap3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinkbayes2/chap2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1794">
-          <caret selection-end-column="39" />
-          <folding>
-            <marker date="1554185562658" expanded="true" signature="425:426" ph="..." />
-            <marker date="1554185562658" expanded="true" signature="425:431" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/experiments.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="242" column="22" selection-start-line="242" selection-start-column="22" selection-end-line="242" selection-end-column="22" />
-          <folding>
-            <element signature="e#44#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinkbayes2/learning_classes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="216" column="8" selection-start-line="216" selection-start-column="8" selection-end-line="216" selection-end-column="8" />
-          <folding>
-            <marker date="1552672609791" expanded="true" signature="4990:4991" ph="..." />
-            <marker date="1552672609791" expanded="true" signature="4990:4996" ph="..." />
-            <marker date="1552672609791" expanded="true" signature="5370:6297" ph="..." />
-            <marker date="1552672609791" expanded="true" signature="5607:6146" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinkbayes2/thinkbayes2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="3034" column="26" selection-start-line="3034" selection-start-column="22" selection-end-line="3034" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinkbayes2/chap5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
-        </state>
-      </provider>
-    </entry>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="masterDetails">
     <states>
