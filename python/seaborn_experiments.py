@@ -78,3 +78,80 @@ plt.show()
 
 sns.clustermap(fp,cmap='coolwarm',standard_scale=1)
 plt.show()
+
+#### Grid plots ####
+iris = sns.load_dataset('iris')
+iris.head()
+iris['species'].unique()
+
+sns.pairplot(iris)
+plt.show()
+
+g = sns.PairGrid(iris)
+g.map(plt.scatter)
+plt.show()
+
+g = sns.PairGrid(iris)
+g.map_diag(sns.distplot)
+g.map_upper(plt.scatter)
+g.map_lower(sns.kdeplot)
+plt.show()
+
+g = sns.FacetGrid(tips,col='time',row='smoker')
+g.map(sns.distplot,'total_bill')
+plt.show()
+
+g = sns.FacetGrid(tips,col='time',row='smoker')
+g.map(plt.scatter,'total_bill','tip')
+plt.show()
+
+#### Regression plots ####
+sns.lmplot(x='total_bill',y='tip',data=tips, hue='sex')
+plt.show()
+
+sns.lmplot(x='total_bill',y='tip',data=tips, hue='sex',markers=['o','v'],
+           scatter_kws={'s':100})
+plt.show()
+
+sns.lmplot(x='total_bill',y='tip',data=tips,col='sex',row='time')  # essentially does the Grid from the previous section
+plt.show()
+
+sns.lmplot(x='total_bill',y='tip',data=tips,col='day',row='time',hue='sex')
+plt.show()
+
+sns.lmplot(x='total_bill',y='tip',data=tips,col='day',hue='sex', aspect=0.6,size=8)
+plt.show()
+
+#### Style and Color ####
+sns.set_style('darkgrid')
+sns.countplot(x='sex',data=tips)
+plt.show()
+
+sns.set_style('whitegrid')
+sns.countplot(x='sex',data=tips)
+plt.show()
+
+sns.set_style('ticks')
+sns.countplot(x='sex',data=tips)
+sns.despine()
+plt.show()
+
+sns.set_style('ticks')
+sns.countplot(x='sex',data=tips)
+sns.despine(left=True, bottom=True)
+plt.show()
+
+plt.figure(figsize=(12,3))
+sns.countplot(x='sex',data=tips)
+plt.show()
+
+sns.set_context('poster',font_scale=2)
+sns.countplot(x='sex',data=tips)
+plt.show()
+
+sns.set_context('notebook')
+sns.countplot(x='sex',data=tips)
+plt.show()
+
+sns.lmplot(x='total_bill',y='tip',data=tips,hue='sex',palette='seismic')
+plt.show()
