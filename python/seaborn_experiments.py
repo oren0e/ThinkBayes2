@@ -62,3 +62,19 @@ plt.show()
 
 sns.factorplot(x='day',y='total_bill',data=tips, kind='violin')
 plt.show()
+
+#### Matrix plots ####
+flights = sns.load_dataset('flights')
+flights.head()
+
+tc = tips.corr()
+
+sns.heatmap(tc,annot=True,cmap='coolwarm')
+plt.show()
+
+fp = flights.pivot_table(index='month', columns='year',values='passengers')
+sns.heatmap(fp,linecolor='white',linewidths=1,cmap='coolwarm')
+plt.show()
+
+sns.clustermap(fp,cmap='coolwarm',standard_scale=1)
+plt.show()
