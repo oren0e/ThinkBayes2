@@ -83,3 +83,53 @@ plt.show()
 
 # Now see if you can use seaborn's lmplot() to create a linear fit on the number of calls per month.
 # Keep in mind you may need to reset the index to a column.
+byMonth.reset_index(inplace=True)
+sns.lmplot(x='Month',y='twp', data=byMonth)
+plt.show()
+
+# Create a new column called 'Date' that contains the date from the timeStamp column.
+# You'll need to use apply along with the .date() method.
+df['date'] = df['timeStamp'].apply(lambda x: x.date())
+
+# Now groupby this Date column with the count() aggregate and create a plot of counts of 911 calls.
+df.groupby('date').count()['lat'].plot()
+plt.show()
+
+# Now recreate this plot but create 3 separate plots with each plot representing a Reason for the 911 call
+for i in df['Reason'].unique():
+    df[df['Reason'] == i].groupby('date').count()['lat'].plot()
+    plt.show()
+
+'''
+Now let's move on to creating heatmaps with seaborn and our data.
+We'll first need to restructure the dataframe so that the columns become the Hours and the Index becomes
+the Day of the Week. There are lots of ways to do this,
+but I would recommend trying to combine groupby with an unstack method.
+Reference the solutions if you get stuck on this!
+'''
+hm_df = df.groupby(['Day_of_week','Hour']).count()['lat'].unstack()
+
+# Now create a HeatMap using this new DataFrame.
+sns.heatmap(hm_df)
+plt.show()
+
+# Now create a clustermap using this DataFrame.
+sns.clustermap(hm_df, standard_scale=1)
+plt.show()
+
+#  Now repeat these same plots and operations, for a DataFrame that shows the Month as the column.
+def plot_hm(var: str):
+    hm_df = df.groupby(['Day_of_week', var]).count()['lat'].unstack()
+
+    # Now create a HeatMap using this new DataFrame.
+    sns.heatmap(hm_df)
+    plt.show()
+
+    # Now create a clustermap using this DataFrame.
+    sns.clustermap(hm_df, standard_scale=1)
+    plt.show()
+
+plot_hm('Month')
+
+# END
+
