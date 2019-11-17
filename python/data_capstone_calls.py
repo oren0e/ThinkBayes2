@@ -36,6 +36,7 @@ plt.show()
 
 # Now let us begin to focus on time information. What is the data type of the objects in the timeStamp column?
 df['timeStamp'].dtypes
+type(df['timeStamp'].iloc[0])
 
 #  You should have seen that these timestamps are still strings.
 #  Use pd.to_datetime to convert the column from strings to DateTime objects.
@@ -86,6 +87,8 @@ plt.show()
 byMonth.reset_index(inplace=True)
 sns.lmplot(x='Month',y='twp', data=byMonth)
 plt.show()
+sns.lmplot(x='Month',y='twp', data=byMonth.reset_index())
+plt.show()
 
 # Create a new column called 'Date' that contains the date from the timeStamp column.
 # You'll need to use apply along with the .date() method.
@@ -128,6 +131,7 @@ def plot_hm(var: str):
     # Now create a clustermap using this DataFrame.
     sns.clustermap(hm_df, standard_scale=1)
     plt.show()
+
 
 plot_hm('Month')
 
