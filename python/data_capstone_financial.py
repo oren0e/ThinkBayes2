@@ -71,5 +71,29 @@ plt.show()
 # (Hint: Try using a for loop, or use .xs to get a cross section of the data.)*
 sns.set_style('whitegrid')
 bank_stocks1_with_date = bank_stocks1.stack().reset_index()[bank_stocks1.stack().reset_index()['Stock Info'] == 'Close']
-bank_stocks1_with_date.plot
+fig = plt.figure(figsize=(12,5))
+for t in tickers_lst:
+    sns.lineplot(x='Date', y=t, data=bank_stocks1_with_date)
+fig.legend(loc=(0.93,0.7),labels=tickers_lst,title='Bank Ticker')
 plt.show()
+
+# Plot the rolling 30 day average against the Close Price for Bank Of America's stock for the year 2008
+bank_stocks1_with_date['MA'] = bank_stocks1_with_date[bank_stocks1_with_date\
+                                                      ['Date'].dt.year == 2008].loc[:,['BAC']]\
+                                                      .rolling(window=30).mean()
+fig = plt.figure(figsize=(12,7))
+sns.lineplot(x='Date', y='BAC', data=bank_stocks1_with_date[bank_stocks1_with_date['Date'].dt.year == 2008])
+sns.lineplot(x='Date', y='MA', data=bank_stocks1_with_date)
+fig.legend(loc=(0.85,0.9), labels=['BAC CLOSE','30 Day Avg'])
+plt.show()
+
+# Create a heatmap of the correlation between the stocks Close Price
+sns.heatmap(bank_stocks1_with_date.loc[:,'BAC':'WFC'].corr(), cmap='coolwarm',annot=True)
+plt.show()
+
+# Optional: Use seaborn's clustermap to cluster the correlations together
+sns.clustermap(bank_stocks1_with_date.loc[:,'BAC':'WFC'].corr(), cmap='coolwarm',annot=True)
+plt.show()
+
+
+
