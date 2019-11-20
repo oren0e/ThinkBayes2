@@ -20,7 +20,9 @@ for key, ticker in tickers.items():
                                    api_key='e779f083cb1660c3befb3e9850e05f13f78ce2c0')
 
 tickers_lst = list(tickers.values())
-
+"""
+could also do start = datetime.datetime(2006,1,1)
+"""
 # Use pd.concat to concatenate the bank dataframes together to a single data frame called bank_stocks.
 # Set the keys argument equal to the tickers list. Also pay attention to what axis you concatenate on.
 bank_stocks = pd.concat([dfs[key] for key in dfs.keys()], keys=[ticker for ticker in tickers_lst],axis=1)
@@ -30,15 +32,17 @@ bank_stocks = bank_stocks.xs(list(itertools.product(tickers_lst,var)),axis=1)
 bank_stocks1 = pd.read_pickle('/Users/orenepshtain/personal/python_and_bayse/ThinkBayes2/python/' \
                               'Refactored_Py_DS_ML_Bootcamp-master/10-Data-Capstone-Projects/all_banks')
 bank_stocks1.xs(list(itertools.product(tickers_lst,['Close'])),axis=1).max()
+bank_stocks1.xs(key='Close',axis=1,level='Stock Info').max()  # better way
+
 # We can use pandas pct_change() method on the Close column to create a column representing this return value.
 # Create a for loop that goes and for each Bank Stock Ticker creates this returns
 # column and set's it as a column in the returns DataFrame
 returns = pd.DataFrame()
 returns = bank_stocks1.xs(list(itertools.product(tickers_lst,['Close'])),axis=1).pct_change()
+returns = bank_stocks1.xs(key='Close',axis=1,level='Stock Info').pct_change()  # better way
 
 # Create a pairplot using seaborn of the returns dataframe. What stock stands out to you? Can you figure out why?
 sns.pairplot(returns)
-sns.set
 plt.show()
 
 # Using this returns DataFrame, figure out on what dates each bank stock had the best and worst single day returns.
@@ -46,24 +50,33 @@ plt.show()
 # did anything significant happen that day?
 
 returns.xs(list(itertools.product(tickers_lst,['Close'])),axis=1).idxmax()  # best
-returns.xs(list(itertools.product(tickers_lst,['Close'])),axis=1).idxmin()  # worst
+returns.idxmax()  # a better way
 
+returns.xs(list(itertools.product(tickers_lst,['Close'])),axis=1).idxmin()  # worst
+returns.idxmin()  # a better way
 # Take a look at the standard deviation of the returns, which stock would you classify
 # as the riskiest over the entire time period?
 # Which would you classify as the riskiest for the year 2015?
 returns.xs(list(itertools.product(tickers_lst,['Close'])),axis=1).std()  # the entire time period
+returns.std()  # a better way
+
 returns_with_date = returns.xs(list(itertools.product(tickers_lst,['Close'])),axis=1).reset_index()
 returns_with_date[returns_with_date['Date'].dt.year == 2015].xs(list(itertools.product(tickers_lst,['Close'])),axis=1).std()
+returns.ix['2015-01-01':'2015-12-31'].std()  # a better way
+
 
 # Create a distplot using seaborn of the 2015 returns for Morgan Stanley
 g = sns.distplot(returns_with_date[returns_with_date['Date'].dt.year == 2015].xs('MS',axis=1),
              bins=50,color='green')
+
+g = sns.distplot(returns.ix['2015-01-01':'2015-12-31']['MS'],color='green',bins=50)  # a better way
 g.set_xlabel('MS Return')
 plt.show()
 
 # Create a distplot using seaborn of the 2008 returns for CitiGroup
 g = sns.distplot(returns_with_date[returns_with_date['Date'].dt.year == 2008].xs('C',axis=1),
              bins=100,color='red')
+g = sns.distplot(returns.ix['2008-01-01':'2008-12-31']['C'],color='red',bins=50)  # a better way
 g.set_xlabel('C Return')
 plt.show()
 
@@ -77,6 +90,10 @@ for t in tickers_lst:
 fig.legend(loc=(0.93,0.7),labels=tickers_lst,title='Bank Ticker')
 plt.show()
 
+# the xs way
+bank_stocks1.xs(key='Close',axis=1,level='Stock Info').plot()
+plt.show()
+
 # Plot the rolling 30 day average against the Close Price for Bank Of America's stock for the year 2008
 bank_stocks1_with_date['MA'] = bank_stocks1_with_date[bank_stocks1_with_date\
                                                       ['Date'].dt.year == 2008].loc[:,['BAC']]\
@@ -87,13 +104,25 @@ sns.lineplot(x='Date', y='MA', data=bank_stocks1_with_date)
 fig.legend(loc=(0.85,0.9), labels=['BAC CLOSE','30 Day Avg'])
 plt.show()
 
+# ix slices index of dataframe! (the tutorial way)
+plt.figure(figsize=(12,4))
+bank_stocks1['BAC']['Close'].ix['2008-01-01':'2009-01-01'].rolling(window=30).mean().plot(label='30 day Mov Avg')
+bank_stocks1['BAC']['Close'].ix['2008-01-01':'2009-01-01'].plot(label='BAC Close')
+plt.legend()
+plt.show()
+
 # Create a heatmap of the correlation between the stocks Close Price
 sns.heatmap(bank_stocks1_with_date.loc[:,'BAC':'WFC'].corr(), cmap='coolwarm',annot=True)
+plt.show()
+
+sns.heatmap(bank_stocks1.xs(key='Close',axis=1,level='Stock Info').corr(),annot=True)  # better way
 plt.show()
 
 # Optional: Use seaborn's clustermap to cluster the correlations together
 sns.clustermap(bank_stocks1_with_date.loc[:,'BAC':'WFC'].corr(), cmap='coolwarm',annot=True)
 plt.show()
 
+sns.clustermap(bank_stocks1.xs(key='Close',axis=1,level='Stock Info').corr(),annot=True)  # better way
+plt.show()
 
 
