@@ -50,8 +50,28 @@ def predict(ratings, similarity, type='user'):
 item_prediction = predict(train_data_matrix, item_similarity, type='item')
 user_prediction = predict(train_data_matrix, user_similarity, type='user')
 
+# evaluation
+from sklearn.metrics import mean_squared_error
+from math import sqrt
+def rmse(prediction, ground_truth):
+    prediction = prediction[ground_truth.nonzero()].flatten()
+    ground_truth = ground_truth[ground_truth.nonzero()].flatten()
+    return sqrt(mean_squared_error(prediction, ground_truth))
 
+print('User-based CF RMSE: ' + str(rmse(user_prediction, test_data_matrix)))
+print('Item-based CF RMSE: ' + str(rmse(item_prediction, test_data_matrix)))
 
+# Model-based Collaborative Filtering
+# Let's calculate the sparsity level of MovieLens dataset:
+sparsity = round(1.0 - len(df)/float(n_users*n_items),3)
+print('The sparsity level of MovieLens100K is ' +  str(sparsity*100) + '%')
 
+import scipy.sparse as sp
+from scipy.sparse.linalg import svds
 
-
+# TODO: read about Single Value Decomposition first
+#get SVD components from train matrix. Choose k.
+u, s, vt = svds(train_data_matrix, k = 20)
+s_diag_matrix=np.diag(s)
+X_pred = np.dot(np.dot(u, s_diag_matrix), vt)
+print('User-based CF MSE: ' + str(rmse(X_pred, test_data_matrix)))
