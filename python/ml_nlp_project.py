@@ -49,3 +49,53 @@ plt.show()
 yelp_class = yelp[(yelp['stars'] == 1) | (yelp['stars'] == 5)]
 yelp_class.head()
 
+# Create two objects X and y. X will be the 'text' column of yelp_class and y will be the 'stars' column of yelp_class.
+# (Your features and target/labels)
+X = yelp_class['text']
+y = yelp_class['stars']
+
+# Import CountVectorizer and create a CountVectorizer object
+from sklearn.feature_extraction.text import CountVectorizer
+yelp_text_count = CountVectorizer()
+# Use the fit_transform method on the CountVectorizer object and pass in X (the 'text' column). Save this result by overwriting X
+X = yelp_text_count.fit_transform(raw_documents=X)
+
+# Use train_test_split to split up the data into X_train, X_test, y_train, y_test. Use test_size=0.3 and random_state=101
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=101)
+
+# Training the model
+# Import MultinomialNB and create an instance of the estimator and call is nb
+from sklearn.naive_bayes import MultinomialNB
+nb = MultinomialNB()
+# Now fit nb using the training data.
+nb.fit(X_train, y_train)
+pred = nb.predict(X_test)
+from sklearn.metrics import classification_report, confusion_matrix
+print(confusion_matrix(y_test, pred))
+print('\n')
+print(classification_report(y_test,pred))
+
+# Let's see what happens if we try to include TF-IDF to this process using a pipeline
+from sklearn.feature_extraction.text import TfidfTransformer
+from sklearn.pipeline import Pipeline
+
+# Now create a pipeline with the following steps:CountVectorizer(), TfidfTransformer(),MultinomialNB()
+model_pipe = Pipeline([('count_vectorizer', CountVectorizer()),
+                       ('tfidf', TfidfTransformer()),
+                       ('naive_bayes', MultinomialNB())])
+# Time to use the pipeline! Remember this pipeline has all your pre-process steps in it already,
+# meaning we'll need to re-split the original data (Remember that we overwrote X as the CountVectorized version.
+# What we need is just the text
+X = yelp_class['text']
+y = yelp_class['stars']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=101)
+
+# Now fit the pipeline to the training data. Remember you can't use the same training data as last time because
+# that data has already been vectorized. We need to pass in just the text and labels
+model_pipe.fit(X_train, y_train)
+pred = model_pipe.predict(X_test)
+
+print(confusion_matrix(y_test, pred))
+print('\n')
+print(classification_report(y_test,pred))
