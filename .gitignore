@@ -73,3 +73,7 @@ DS_Store
 *.png
 *.tiff
 *.gif
+
+# spark files
+*.pem
+newspark.pem
